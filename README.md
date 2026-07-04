@@ -50,3 +50,4 @@ npm run dev
 - `data/tmp_jobs/`, `data/cvgg_cache/`, `data/tile_cache/` — gegenereerde
   cache- en jobbestanden.
 # Gis-studiegebied-tool
+# Gis-studiegebied-tool
