@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GIS Studiegebied Tool</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside id="panel">
+        <h1>Studiegebied</h1>
+        <p class="hint">
+          Teken een polygoon op de kaart om je studiegebied te bepalen. Kies
+          daarna welke PDOK-kaartlagen je wilt downloaden.
+        </p>
+        <div class="draw-controls">
+          <button id="btn-draw">Polygoon tekenen</button>
+          <button id="btn-finish">Voltooien</button>
+          <button id="btn-clear">Wissen</button>
+        </div>
+        <p class="hint" id="draw-hint">
+          Klik op de kaart om punten te plaatsen. Dubbelklik of klik op
+          "Voltooien" om af te ronden.
+        </p>
+        <h2>Coördinaten (EPSG:28992)</h2>
+        <pre id="coords-box">-</pre>
+        <h2>Kaartlagen <span id="layer-count" class="hint"></span></h2>
+        <input id="layer-search" type="text" placeholder="Zoek kaartlaag..." autocomplete="off" />
+        <div class="layer-buttons">
+          <button id="btn-select-all" class="small">Alles selecteren</button>
+          <button id="btn-deselect-all" class="small">Alles deselecteren</button>
+        </div>
+        <div id="layer-list">Laden...</div>
+        <label for="output-format">Bestandsformaat</label>
+        <select id="output-format">
+          <option value="gpkg">GeoPackage (.gpkg)</option>
+          <option value="shp">Shapefile (.zip)</option>
+        </select>
+        <button id="btn-download" disabled>Download studiegebied</button>
+        <div id="status"></div>
+      </aside>
+      <div id="map-container">
+        <div id="search-bar">
+          <input id="search-input" type="text" placeholder="Zoek een plaats of adres..." autocomplete="off" />
+          <ul id="search-results"></ul>
+        </div>
+        <select id="basemap-select" title="Achtergrondkaart"></select>
+        <div id="map"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

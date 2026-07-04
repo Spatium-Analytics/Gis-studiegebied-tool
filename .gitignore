@@ -1,0 +1,22 @@
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+
+# Python (backend)
+backend/.venv/
+backend/**/__pycache__/
+*.pyc
+
+# Node (frontend)
+frontend/node_modules/
+frontend/dist/
+
+# Generated data / caches
+data/tmp_jobs/*
+!data/tmp_jobs/.gitkeep
+data/cvgg_cache/*
+!data/cvgg_cache/.gitkeep
+data/tile_cache/*
+!data/tile_cache/.gitkeep
