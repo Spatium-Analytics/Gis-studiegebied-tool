@@ -20,3 +20,10 @@ data/cvgg_cache/*
 !data/cvgg_cache/.gitkeep
 data/tile_cache/*
 !data/tile_cache/.gitkeep
+*.pem
+id_ed25519
+id_ed25519.pub
+id_rsa
+id_rsa.pub
+*ssh-agent*
+*ssh-keygen*
